@@ -2,6 +2,7 @@ import React from 'react';
 import PostHeader from './PostHeader';
 import PostLike from './PostLike';
 import CommentSection from '../CommentSection/CommentSection';
+import './Posts.css';
 
 export default function PostContainer(props) {
   return (
