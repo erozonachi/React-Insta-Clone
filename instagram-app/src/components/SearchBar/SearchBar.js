@@ -4,14 +4,15 @@ import SearchIcon from '@material-ui/icons/SearchOutlined';
 import ExploreIcon from '@material-ui/icons/ExploreOutlined';
 import FavoriteIcon from '@material-ui/icons/FavoriteBorder';
 import PersonIcon from '@material-ui/icons/PersonOutlineOutlined';
+import './SearchBar.css';
 
 export default function SearchBar() {
   return(
     <div className='search-bar'>
       <div className='logo-container'>
-        <div className='logo-item'>
-          <PhotoCamera />
-        </div>
+        <span>
+          <PhotoCamera className='logo-item' />
+        </span>
         <h1 className='logo-item'>
           Instagram
         </h1>
@@ -20,9 +21,9 @@ export default function SearchBar() {
         <input className='search-box' placeholder={<SearchIcon /> + ' Search'} />
       </div>
       <div className='search-controls'>
-        <ExploreIcon />
-        <FavoriteIcon />
-        <PersonIcon />
+        <ExploreIcon className='control' />
+        <FavoriteIcon className='control' />
+        <PersonIcon className='control' />
       </div>
     </div>
   );
