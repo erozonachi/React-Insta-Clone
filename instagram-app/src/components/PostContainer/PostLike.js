@@ -9,7 +9,7 @@ export default function PostLike(props) {
         <FavoriteIcon />
         <CommentIcon />
       </div>
-      <span>{props.likes + props.likes > 1? ' likes' : ' like'}</span>
+      <span>{`${props.likes} ${props.likes > 1? 'likes' : 'like'}`}</span>
     </div>
   );
 }

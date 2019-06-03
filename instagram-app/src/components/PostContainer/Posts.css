@@ -13,6 +13,10 @@
   padding: 1em 0;
 }
 
+.post-container > img {
+  width: 100%;
+}
+
 .post-header .display-pic {
   width: 50px;
   border-radius: 50%;
