@@ -8,7 +8,7 @@ export default function CommentSection(props) {
   return (
     <div className='comment-container'>
       <ul>
-        {props.comments.map(comment => <Comment key={`${comment.id}`} user={comment.username} text={comment.text} />)}
+        {props.comments.map(comment => <Comment key={`${comment.id}`} comment={comment} />)}
       </ul>
       <span>{props.timestamp}</span>
       <AddComment 
