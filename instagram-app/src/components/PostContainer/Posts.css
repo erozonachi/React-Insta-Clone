@@ -1,4 +1,4 @@
-.post-container {
+.post-container, .comment-container {
   display: flex;
   flex-direction: column;
   margin: .5em;
@@ -42,4 +42,18 @@
 .like-controls .like-control {
   margin-right: 1em;
   cursor: pointer;
+}
+
+.comment-container ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: .5em;
+}
+.comment-container ul li {
+  margin-bottom: .5em;
+}
+.comment-container ul li span {
+  font-weight: bold;
 }
