@@ -1,8 +1,6 @@
 .post-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin: .5em;
 }
 
@@ -25,4 +23,23 @@
 
 .post-header span {
   font-weight: bold;
+}
+
+.like-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: .5em 0;
+  width: 100%;
+  margin-left: 1em;
+
+}
+
+.like-container .like-controls {
+  margin-bottom: .5em;
+}
+.like-controls .like-control {
+  margin-right: 1em;
+  cursor: pointer;
 }
