@@ -1,6 +1,7 @@
 import React from 'react';
 import Comment from './Comment';
 import AddComment from './AddComment';
+import PropTypes from 'prop-types';
 import './Comments.css';
 
 export default function CommentSection(props) {
@@ -19,3 +20,12 @@ export default function CommentSection(props) {
     </div>
   );
 }
+
+CommentSection.propTypes = {
+  id: PropTypes.string.isRequired,
+  val: PropTypes.string.isRequired,
+  timestamp: PropTypes.string.isRequired,
+  changeHandler: PropTypes.func.isRequired,
+  submitHandler: PropTypes.func.isRequired,
+  comments: PropTypes.arrayOf(PropTypes.object),
+};
