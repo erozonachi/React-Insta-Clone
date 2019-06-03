@@ -14,6 +14,42 @@ class App extends React.Component {
     };
   }
 
+  handleChange = (id, val) => {
+    this.setState(prevState => {
+      const newPosts = prevState.posts.map(post => {
+        if (post.id === id) {
+          post.newComment = val;
+        }
+        return post;
+      });
+
+      return {
+        posts: newPosts,
+      };
+    });
+  }
+
+  handleSubmit = (id) => {
+    this.setState(prevState => {
+      const newPosts = prevState.posts.map(post => {
+        if (post.id === id) {
+          if (post.newComment.trim() !== '') {
+            post.comments.concat({
+              id: Date.now(),
+              username: 'Eneh',
+              text: post.newComment,
+            })
+          }
+        }
+        return post;
+      });
+
+      return {
+        posts: newPosts,
+      };
+    });
+  }
+
   render() {
     return (
       <div className="App">

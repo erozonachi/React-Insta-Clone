@@ -8,7 +8,7 @@ export default function AddComment(props) {
 
   const onChangeHandler = (event) => {
     event.stopPropagation();
-    props.changeHandler(event.target.value);
+    props.changeHandler(props.id, event.target.value);
   }
   return(
     <form onSubmit={submitHandler} className='add-comment-container'>
