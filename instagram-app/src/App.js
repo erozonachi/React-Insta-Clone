@@ -34,11 +34,12 @@ class App extends React.Component {
       const newPosts = prevState.posts.map(post => {
         if (post.id === id) {
           if (post.newComment.trim() !== '') {
-            post.comments.concat({
+            post.comments.push({
               id: Date.now(),
               username: 'Eneh',
               text: post.newComment,
-            })
+            });
+            post.newComment = '';
           }
         }
         return post;
@@ -54,7 +55,12 @@ class App extends React.Component {
     return (
       <div className="App">
         <SearchBar />
-        {this.state.posts.map(post => <PostContainer key={post.id} post={post} />)}
+        {this.state.posts.map(post => <PostContainer 
+          key={post.id} 
+          changeHandler={this.handleChange} 
+          submitHandler={this.handleSubmit}
+          post={post} 
+        />)}
       </div>
     );
   }
