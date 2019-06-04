@@ -11,12 +11,12 @@ export default class PostContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isLiked: LocalData.fetchData('isLiked') || false,
+      isLiked: LocalData.fetchData(`isLiked${this.props.post.id}`) || false,
     }
   }
 
   componentDidUpdate() {
-    LocalData.saveData('isLiked', this.state.isLiked);
+    LocalData.saveData(`isLiked${this.props.post.id}`, this.state.isLiked);
   }
 
   handleLikeClick = (event) => {
