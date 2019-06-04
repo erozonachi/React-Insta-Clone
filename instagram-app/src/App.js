@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchBar from './components/SearchBar/SearchBar';
-import dummyData from './dummy-data';
+import getDummyData from './dummy-data';
 import './App.css';
 import PostContainer from './components/PostContainer/PostContainer';
 
@@ -8,10 +8,19 @@ class App extends React.Component {
 
   constructor() {
     super();
-
     this.state = {
-      posts: dummyData
+      posts: [],
     };
+  }
+
+  componentDidMount() {
+    this.loadStateData();
+  }
+
+  loadStateData = () => {
+    getDummyData().then(posts => (
+      this.setState({posts})
+    ));
   }
 
   handleChange = (id, val) => {
