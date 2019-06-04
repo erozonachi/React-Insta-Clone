@@ -9,6 +9,7 @@ export default class CommentSection extends Component {
     super(props);
     this.state = {
       comments: props.comments,
+      newComment: '',
     };
   }
 
@@ -19,7 +20,10 @@ export default class CommentSection extends Component {
 
   onChangeHandler = (event) => {
     event.stopPropagation();
-    this.props.changeHandler(this.props.id, event.target.value);
+    const val = event.target.value;
+    this.setState({
+        newComment: val,
+      });
   }
 
   render() {
@@ -31,7 +35,7 @@ export default class CommentSection extends Component {
         <span>{this.props.timestamp}</span>
         <AddComment 
           id={this.props.id}
-          val={this.props.val}
+          val={this.state.newComment}
           changeHandler={this.onChangeHandler}
           submitHandler={this.submitHandler}
         />
@@ -42,9 +46,7 @@ export default class CommentSection extends Component {
 
 CommentSection.propTypes = {
   id: PropTypes.string.isRequired,
-  val: PropTypes.string.isRequired,
   timestamp: PropTypes.string.isRequired,
-  changeHandler: PropTypes.func.isRequired,
   submitHandler: PropTypes.func.isRequired,
   comments: PropTypes.arrayOf(PropTypes.object),
 };

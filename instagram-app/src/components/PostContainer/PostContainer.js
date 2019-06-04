@@ -13,8 +13,6 @@ export default function PostContainer(props) {
       <PostLike likes={props.post.likes} />
       <CommentSection 
         id={props.post.id}
-        val={props.post.newComment}
-        changeHandler={props.changeHandler}
         submitHandler={props.submitHandler}
         timestamp={props.post.timestamp} 
         comments={props.post.comments} 
@@ -34,6 +32,5 @@ PostContainer.propTypes = {
     timestamp: PropTypes.string.isRequired,
     comments: PropTypes.arrayOf(PropTypes.object),
   }),
-  changeHandler: PropTypes.func.isRequired,
   submitHandler: PropTypes.func.isRequired,
 };
