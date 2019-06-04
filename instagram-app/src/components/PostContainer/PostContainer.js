@@ -4,14 +4,19 @@ import PostLike from './PostLike';
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
 import './Posts.css';
+import LocalData from '../../LocalData';
 
 export default class PostContainer extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      isLiked: false,
+      isLiked: LocalData.fetchData('isLiked') || false,
     }
+  }
+
+  componentDidUpdate() {
+    LocalData.saveData('isLiked', this.state.isLiked);
   }
 
   handleLikeClick = (event) => {
