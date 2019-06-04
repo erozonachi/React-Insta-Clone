@@ -4,6 +4,7 @@ import getDummyData from './dummy-data';
 import './App.css';
 import PostContainer from './components/PostContainer/PostContainer';
 import FuzzySearch from './FuzzySearch';
+import LocalData from './LocalData';
 
 class App extends React.Component {
 
@@ -17,6 +18,10 @@ class App extends React.Component {
 
   componentDidMount() {
     this.loadStateData();
+  }
+
+  componentDidUpdate() {
+    LocalData.saveData('postList', this.state.posts);
   }
 
   loadStateData = () => {
