@@ -44,6 +44,21 @@ class App extends React.Component {
     });
   }
 
+  handleLikeClick = (id, val) => {
+    this.setState(prevState => {
+      const newPosts = prevState.posts.map(post => {
+        if (post.id === id) {
+          post.likes += val
+        }
+        return post;
+      });
+
+      return {
+        posts: newPosts,
+      };
+    });
+  }
+
   render() {
     return (
       <div className="App">
@@ -52,6 +67,7 @@ class App extends React.Component {
           key={post.id} 
           changeHandler={this.handleChange} 
           submitHandler={this.handleSubmit}
+          likeHandler={this.handleLikeClick}
           post={post} 
         />)}
       </div>
