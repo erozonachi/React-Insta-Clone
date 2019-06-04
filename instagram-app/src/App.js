@@ -3,6 +3,7 @@ import SearchBar from './components/SearchBar/SearchBar';
 import getDummyData from './dummy-data';
 import './App.css';
 import PostContainer from './components/PostContainer/PostContainer';
+import FuzzySearch from './FuzzySearch';
 
 class App extends React.Component {
 
@@ -65,10 +66,14 @@ class App extends React.Component {
   }
 
   render() {
+    const postList = this.state.searchTerm? 
+    FuzzySearch(this.state.posts, this.state.searchTerm) : 
+    this.state.posts;
+
     return (
       <div className="App">
         <SearchBar changeHandler={this.handleSearch} />
-        {this.state.posts.map(post => <PostContainer 
+        {postList.map(post => <PostContainer 
           key={post.id} 
           changeHandler={this.handleChange} 
           submitHandler={this.handleSubmit}
