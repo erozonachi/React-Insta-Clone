@@ -25,9 +25,14 @@ class App extends React.Component {
   }
 
   loadStateData = () => {
-    getDummyData().then(posts => (
-      this.setState({posts})
-    ));
+    const postList = LocalData.fetchData('postList');
+    if (postList) {
+      this.setState({posts: postList});
+    } else {
+      getDummyData().then(posts => (
+        this.setState({posts})
+      ));
+    }
   }
 
   handleSubmit = (id, commentText) => {
