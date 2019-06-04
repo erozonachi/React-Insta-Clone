@@ -97,4 +97,6 @@ const dummyData = [
   }
 ];
 
-export default dummyData;
+const getDummyData = () => (Promise.resolve(dummyData));
+
+export default getDummyData;
