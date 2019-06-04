@@ -23,17 +23,16 @@ class App extends React.Component {
     ));
   }
 
-  handleSubmit = (id) => {
+  handleSubmit = (id, commentText) => {
     this.setState(prevState => {
       const newPosts = prevState.posts.map(post => {
         if (post.id === id) {
-          if (post.newComment.trim() !== '') {
+          if (commentText.trim() !== '') {
             post.comments.push({
               id: Date.now(),
               username: 'Eneh',
-              text: post.newComment,
+              text: commentText,
             });
-            post.newComment = '';
           }
         }
         return post;

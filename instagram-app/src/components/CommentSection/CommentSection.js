@@ -13,9 +13,10 @@ export default class CommentSection extends Component {
     };
   }
 
-  submitHandler = (event) => {
+  addNewComment = (event) => {
     event.preventDefault();
-    this.props.submitHandler(this.props.id);
+    this.props.submitHandler(this.props.id, this.state.newComment);
+    this.setState({newComment: ''});
   };
 
   onChangeHandler = (event) => {
@@ -34,10 +35,9 @@ export default class CommentSection extends Component {
         </ul>
         <span>{this.props.timestamp}</span>
         <AddComment 
-          id={this.props.id}
           val={this.state.newComment}
           changeHandler={this.onChangeHandler}
-          submitHandler={this.submitHandler}
+          submitHandler={this.addNewComment}
         />
       </div>
     );
