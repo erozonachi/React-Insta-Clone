@@ -7,13 +7,16 @@ import './Comments.css';
 export default class CommentSection extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      comments: props.comments,
+    };
   }
 
   render() {
     return (
       <div className='comment-container'>
         <ul>
-          {this.props.comments.map(comment => <Comment key={`${comment.id}`} comment={comment} />)}
+          {this.state.comments.map(comment => <Comment key={`${comment.id}`} comment={comment} />)}
         </ul>
         <span>{this.props.timestamp}</span>
         <AddComment 
