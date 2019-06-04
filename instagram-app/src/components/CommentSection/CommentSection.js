@@ -12,6 +12,16 @@ export default class CommentSection extends Component {
     };
   }
 
+  submitHandler = (event) => {
+    event.preventDefault();
+    this.props.submitHandler(this.props.id);
+  };
+
+  onChangeHandler = (event) => {
+    event.stopPropagation();
+    this.props.changeHandler(this.props.id, event.target.value);
+  }
+
   render() {
     return (
       <div className='comment-container'>
@@ -22,8 +32,8 @@ export default class CommentSection extends Component {
         <AddComment 
           id={this.props.id}
           val={this.props.val}
-          changeHandler={this.props.changeHandler}
-          submitHandler={this.props.submitHandler}
+          changeHandler={this.onChangeHandler}
+          submitHandler={this.submitHandler}
         />
       </div>
     );
