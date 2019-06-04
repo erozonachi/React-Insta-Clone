@@ -1,24 +1,30 @@
-import React from 'react';
+import React, {Component,} from 'react';
 import Comment from './Comment';
 import AddComment from './AddComment';
 import PropTypes from 'prop-types';
 import './Comments.css';
 
-export default function CommentSection(props) {
-  return (
-    <div className='comment-container'>
-      <ul>
-        {props.comments.map(comment => <Comment key={`${comment.id}`} comment={comment} />)}
-      </ul>
-      <span>{props.timestamp}</span>
-      <AddComment 
-        id={props.id}
-        val={props.val}
-        changeHandler={props.changeHandler}
-        submitHandler={props.submitHandler}
-      />
-    </div>
-  );
+export default class CommentSection extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div className='comment-container'>
+        <ul>
+          {this.props.comments.map(comment => <Comment key={`${comment.id}`} comment={comment} />)}
+        </ul>
+        <span>{this.props.timestamp}</span>
+        <AddComment 
+          id={this.props.id}
+          val={this.props.val}
+          changeHandler={this.props.changeHandler}
+          submitHandler={this.props.submitHandler}
+        />
+      </div>
+    );
+  }
 }
 
 CommentSection.propTypes = {
