@@ -10,7 +10,10 @@ export default function PostContainer(props) {
     <div className='post-container'>
       <PostHeader username={props.post.username} displayPic={props.post.thumbnailUrl} />
       <img src={props.post.imageUrl} alt={`${props.post.username} post`} />
-      <PostLike likes={props.post.likes} />
+      <PostLike 
+        likes={props.post.likes} 
+        likeHandler={props.likeHandler}
+      />
       <CommentSection 
         id={props.post.id}
         submitHandler={props.submitHandler}
@@ -32,4 +35,5 @@ PostContainer.propTypes = {
     comments: PropTypes.arrayOf(PropTypes.object),
   }),
   submitHandler: PropTypes.func.isRequired,
+  likeHandler: PropTypes.func.isRequired,
 };
