@@ -4,6 +4,7 @@ import ExploreIcon from '@material-ui/icons/ExploreOutlined';
 import FavoriteIcon from '@material-ui/icons/FavoriteBorder';
 import PersonIcon from '@material-ui/icons/PersonOutlineOutlined';
 import { makeStyles } from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
 import './SearchBar.css';
 
 const useStyles = makeStyles(theme => ({
@@ -16,7 +17,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function SearchBar() {
+export default function SearchBar(props) {
   return(
     <div className='search-bar'>
       <div className='logo-container'>
@@ -28,7 +29,7 @@ export default function SearchBar() {
         </h1>
       </div>
       <div className='search-box-container'>
-        <input className='search-box' placeholder='Search' />
+        <input onChange={props.changeHandler} className='search-box' placeholder='Search' />
       </div>
       <div className='search-controls'>
         <ExploreIcon className={`${useStyles().iconSpaced} control`} />
@@ -37,4 +38,8 @@ export default function SearchBar() {
       </div>
     </div>
   );
+}
+
+SearchBar.propTypes = {
+  changeHandler: PropTypes.func.isRequired,
 }
