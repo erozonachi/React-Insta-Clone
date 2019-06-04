@@ -11,16 +11,25 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(.3),
     fontSize: 30,
   },
+  bgRed: {
+    color: 'red',
+  }
 }));
 
 export default function PostLike(props) {
-  return(
-    <div className='like-container'>
-      <div className='like-controls'>
-        <FavoriteIcon className={`${useStyles().iconSpaced} like-control`} />
-        <CommentIcon className={`${useStyles().iconSpaced} like-control`} />
+
+  const styles = useStyles();
+
+    return(
+      <div className='like-container'>
+        <div className='like-controls'>
+          <FavoriteIcon 
+            onClick={props.likeHandler} 
+            className={`${styles.iconSpaced} like-control ${props.liked? styles.bgRed : null}`} 
+          />
+          <CommentIcon className={`${styles.iconSpaced} like-control`} />
+        </div>
+        <span>{`${props.likes} ${props.likes > 1? 'likes' : 'like'}`}</span>
       </div>
-      <span>{`${props.likes} ${props.likes > 1? 'likes' : 'like'}`}</span>
-    </div>
-  );
+    );
 }
