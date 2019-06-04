@@ -60,10 +60,14 @@ class App extends React.Component {
     });
   }
 
+  handleSearch = (event) => {
+    this.setState({searchTerm: event.target.value});
+  }
+
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar changeHandler={this.handleSearch} />
         {this.state.posts.map(post => <PostContainer 
           key={post.id} 
           changeHandler={this.handleChange} 
