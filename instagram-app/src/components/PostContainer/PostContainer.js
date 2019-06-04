@@ -28,7 +28,6 @@ PostContainer.propTypes = {
     thumbnailUrl: PropTypes.string.isRequired,
     imageUrl: PropTypes.string.isRequired,
     likes: PropTypes.number.isRequired,
-    newComment: PropTypes.string.isRequired,
     timestamp: PropTypes.string.isRequired,
     comments: PropTypes.arrayOf(PropTypes.object),
   }),
