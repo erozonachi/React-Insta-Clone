@@ -1,6 +1,7 @@
  .search-bar {
    display: flex;
    justify-content: center;
+   flex-wrap: wrap;
    align-items: center;
    padding: 1.5em 0;
    font-family: 'Satisfy', cursive;
