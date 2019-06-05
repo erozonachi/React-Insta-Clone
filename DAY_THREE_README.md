@@ -17,7 +17,7 @@
 
 #### Tasks (Day III)
 
-- Create a `<PostsPage />` component in your `components/PostsContainer` directory.
+- [x] Create a `<PostsPage />` component in your `components/PostsContainer` directory.
 
   - You'll have to move a lot of what is rendered in `app.js` to this new component
   - In app.js, render the `PostsPage` component.
