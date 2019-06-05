@@ -6,6 +6,8 @@ import PostsPage from './components/PostContainer/PostsPage';
 import FuzzySearch from './FuzzySearch';
 import LocalData from './LocalData';
 
+const ComponentFromWithAuthenticate = withAuthenticate(PostsPage);
+
 class App extends React.Component {
 
   constructor() {
