@@ -1,5 +1,6 @@
 import React from 'react';
 import LocalData from '../../LocalData';
+import './Login.css';
 
 export default class Login extends React.Component {
   constructor(props) {
