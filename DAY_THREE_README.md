@@ -24,10 +24,10 @@
   - [x] Make sure the app working as it was before since it has been re-factored now.
   - [x] This is to ensure that we clean up our App component a little bit before we re-factor it to be wrapped up in an HOC
 
-- Building the High Order Component
+- [x] Building the High Order Component
 
-  - Create a directory called `authentication`
-  - Inside that directory create a HOC called `withAuthenticate`. This is where all of the magic is going to happen.
+  - [x] Create a directory called `authentication`
+  - [x] Inside that directory create a HOC called `withAuthenticate`. This is where all of the magic is going to happen.
   - This component should be able to take in a component as an argument, and it will return a `class` component.
   - Inside of `withAuthenticate's` render method, you'll want to return the Component that gets passed into it.
   - Be sure to export.
