@@ -1,4 +1,5 @@
 import React from 'react';
+import LocalData from '../../LocalData';
 
 export default class Login extends React.Component {
   constructor(props) {
@@ -19,9 +20,11 @@ export default class Login extends React.Component {
 
   handleFormSubmit = (event) => {
     event.preventDefault();
-    
+
     if (this.state.username.trim() !== '' && this.state.password.trim() !== '') {
       /**  perform login */
+      LocalData.saveData('loginUser', this.state.username);
+      
       this.setState({
         username: '',
         password: ','
