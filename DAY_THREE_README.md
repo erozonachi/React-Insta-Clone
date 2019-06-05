@@ -46,9 +46,9 @@ const withAuthenticate = App =>
   };
 ```
 
-- Build out the LoginPage component. You can design it how you like
+- [x] Build out the LoginPage component. You can design it how you like
 
-  - In your `components` directory, create a directory called `Login` and add a new file called `Login.js`.
+  - [x] In your `components` directory, create a directory called `Login` and add a new file called `Login.js`.
   - There should be a `username` input, a `password` input, and a `Login` button.
   - The component should invoke the `login` function in `Login.js` when a user logs in.
   - This login function should set a `username` on `localStorage`. You'll need to check local storage to see if a user is logged in.
