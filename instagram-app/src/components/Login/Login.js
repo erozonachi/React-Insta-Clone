@@ -9,13 +9,21 @@ export default class Login extends React.Component {
     }
   }
 
+  handleInputChange = (event) => {
+    if (event.target.placeholder.includes('Username')) {
+      this.setState({username: event.target.value});
+    } else if (event.target.placeholder.includes('Password')) {
+      this.setState({password: event.target.value});
+    }
+  }
+
   render() {
     return (
       <div className='login-container'>
         <h1>Instagram</h1>
         <form>
-          <input value={this.state.username} placeholder='Enter Username' />
-          <input value={this.state.password} type='password' placeholder='Enter Password' />
+          <input onChange={this.handleInputChange} value={this.state.username} placeholder='Enter Username' />
+          <input onChange={this.handleInputChange} value={this.state.password} type='password' placeholder='Enter Password' />
           <button type='submit'>Login</button>
         </form>
       </div>
