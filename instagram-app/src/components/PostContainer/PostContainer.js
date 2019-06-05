@@ -37,7 +37,7 @@ export default class PostContainer extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='post-container'>
         <PostHeader username={this.props.post.username} displayPic={this.props.post.thumbnailUrl} />
         <img src={this.props.post.imageUrl} alt={`${this.props.post.username} post`} />
         <PostLike 

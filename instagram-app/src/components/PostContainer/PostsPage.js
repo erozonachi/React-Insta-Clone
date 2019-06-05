@@ -4,7 +4,7 @@ import PostContainer from './PostContainer';
 
 export default function PostsPage(props) {
     return(
-      <div className='post-container'>
+      <div>
         <SearchBar changeHandler={props.searchChangeHandler} />
           {props.postList.map(post => <PostContainer 
             key={post.id} 

@@ -4,13 +4,24 @@
    flex-wrap: wrap;
    align-items: center;
    padding: 1.5em 0;
+   margin: 0 .5em;
    font-family: 'Satisfy', cursive;
+   background-color: #ffffff;
+  border-bottom: .5px dotted #bbb;
  }
 
  .logo-container, .search-box-container, .search-controls {
    display: flex;
    align-items: center;
    width: 33.33%;
+ }
+ @media (max-width:500px) {
+  .logo-container, .search-box-container {
+    width: 50%;
+  }
+  .search-controls {
+    width: 100%;
+  }
  }
 
  .logo-container h1 {
@@ -44,6 +55,11 @@
 
  .search-controls {
    justify-content: flex-end;
+ }
+ @media (max-width: 500px) {
+   .search-controls {
+     justify-content: center;
+   }
  }
 
  .search-controls .control {
