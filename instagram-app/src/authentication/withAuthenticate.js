@@ -1,4 +1,5 @@
 import React from 'react';
+import LocalData from '../LocalData';
 
 const withAuthenticate = PostsComponent => LoginComponent => {
   return class extends React.Component {
@@ -7,6 +8,12 @@ const withAuthenticate = PostsComponent => LoginComponent => {
 
       this.state = {
         loggedIn: false,
+      }
+    }
+
+    componentDidMount() {
+      if(LocalData.fetchData('loginUser')) {
+        this.setState({loggedIn: true})
       }
     }
     
