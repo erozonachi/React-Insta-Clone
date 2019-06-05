@@ -33,9 +33,9 @@
   - [x] Be sure to export.
   - [x] Head over to App.js and `import` in our new `withAuthenticate` Higher Order Component.
   - [x] Set a new const called `ComponentFromWithAuthenticate`, and set it's value to the HOC invoked, with `PostsPage` passed in.
-  - Inside `App`, you should now render `ComponentFromWithAuthenticate` in place of `PostsPage`.
-  - If this worked correctly, then everything should render as it used to.
-  - `withAuthenticate` will look a lot like this when you're done setting it up.
+  - [x] Inside `App`, you should now render `ComponentFromWithAuthenticate` in place of `PostsPage`.
+  - [x] If this worked correctly, then everything should render as it used to.
+  - [x] `withAuthenticate` will look a lot like this when you're done setting it up.
 
 ```js
 const withAuthenticate = App =>
