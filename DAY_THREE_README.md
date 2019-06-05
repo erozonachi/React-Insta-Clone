@@ -54,9 +54,9 @@ const withAuthenticate = App =>
   - [x] This login function should set a `username` on `localStorage`. You'll need to check local storage to see if a user is logged in.
   - [x] Be sure to force the page to reload when a user logs in so that our component un-mounts and mounts again.
 
-- Extending the functionality of the HOC to conditionally render the `LoginPage` or the `App`
+- [x] Extending the functionality of the HOC to conditionally render the `LoginPage` or the `App`
 
-  - First, we need to change our `withAuthenticate` HOC to return a second function that will take in a second component (which will be the `LoginPage`). This will look like a "double arrow" function - `const withAuthenticate = PostsPage => LoginPage => {}`.
+  - [x] First, we need to change our `withAuthenticate` HOC to return a second function that will take in a second component (which will be the `LoginPage`). This will look like a "double arrow" function - `const withAuthenticate = PostsPage => LoginPage => {}`.
   - In `App.js`, we can now invoke the HOC function twice (which is called currying). The first time it's invoked, pass in `PostsPage`. The second time, pass in `LoginPage` (which you'll need to import here). ie - `export default higherOrderComp(FirstComponent)(SecondComponent)`
   - Inside of the class component that the inner function in `withAuthenticate` returns, we need to add a constructor to hold our state data.
   - On state we need a `loggedIn` boolean flag.

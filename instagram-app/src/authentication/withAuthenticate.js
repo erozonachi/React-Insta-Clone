@@ -1,11 +1,13 @@
 import React from 'react';
 
-export default function withAuthenticate(Component) {
+const withAuthenticate = PostsComponent => LoginComponent => {
   return class extends React.Component {
     render() {
       return (
-        <Component {...this.props} />
+        <PostsComponent {...this.props} />
       );
     }
   };
 }
+
+export default withAuthenticate;
