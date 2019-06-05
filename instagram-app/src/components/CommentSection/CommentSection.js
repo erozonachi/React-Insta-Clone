@@ -1,6 +1,7 @@
 import React, {Component,} from 'react';
 import Comment from './Comment';
 import AddComment from './AddComment';
+import moment from 'moment';
 import PropTypes from 'prop-types';
 import './Comments.css';
 
@@ -28,12 +29,16 @@ export default class CommentSection extends Component {
   }
 
   render() {
+    const postedWhen = moment(
+      moment(this.props.timestamp).format('YYYYMMDD'), 'YYYYMMDD').fromNow();
+    console.log(postedWhen);
+
     return (
       <div className='comment-container'>
         <ul>
           {this.state.comments.map(comment => <Comment key={`${comment.id}`} comment={comment} />)}
         </ul>
-        <span>{this.props.timestamp}</span>
+        <span>{postedWhen}</span>
         <AddComment 
           val={this.state.newComment}
           changeHandler={this.onChangeHandler}

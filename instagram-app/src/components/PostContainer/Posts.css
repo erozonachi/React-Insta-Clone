@@ -1,12 +1,8 @@
-.post-container, .comment-container {
+.post-container {
   display: flex;
   flex-direction: column;
   margin: .5em;
   background-color: #ffffff;
-}
-.comment-container {
-  justify-content: flex-start;
-  align-items: flex-start;
 }
 
 .post-container .post-header {
@@ -45,48 +41,5 @@
   margin-bottom: .5em;
 }
 .like-controls .like-control {
-  cursor: pointer;
-}
-
-.comment-container ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin-left: .5em;
-}
-.comment-container ul li {
-  margin-bottom: .5em;
-}
-.comment-container ul li span {
-  font-weight: bold;
-}
-
-.comment-container > span {
-  margin: .5em;
-  color: #bbb;
-}
-
-.comment-container .add-comment-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  border-top: 1px solid #ccc;
-  border-bottom: 2px solid #bbb;
-  padding: 1em 0;
-}
-.add-comment-container input {
-  outline: none;
-  border: none;
-  width: 90%;
-  background-color: inherit;
-}
-.add-comment-container button {
-  outline: none;
-  border: none;
-  font-weight: bold;
-  font-size: 2.4rem;
-  background-color: inherit;
   cursor: pointer;
 }

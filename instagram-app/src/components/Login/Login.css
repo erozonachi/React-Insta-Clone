@@ -22,7 +22,7 @@
   margin: .5em auto;
 }
 
-form input {
+.login-container form input {
   outline: 0;
   border: 1px solid #aaa;
   background-color: #eee;
@@ -32,7 +32,7 @@ form input {
   text-align: center;
 }
 
-form button {
+.login-container form button {
   outline: 0;
   border: none;
   background-color: rgb(9, 124, 139);
