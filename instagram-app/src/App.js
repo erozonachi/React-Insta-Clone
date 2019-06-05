@@ -45,7 +45,7 @@ class App extends React.Component {
           if (commentText.trim() !== '') {
             post.comments.push({
               id: Date.now(),
-              username: 'Eneh',
+              username: LocalData.fetchData('loginUser'),
               text: commentText,
             });
           }
