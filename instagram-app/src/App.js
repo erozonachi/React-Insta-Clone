@@ -1,6 +1,7 @@
 import React from 'react';
 import getDummyData from './dummy-data';
 import './App.css';
+import withAuthenticate from './authentication/withAuthenticate';
 import PostsPage from './components/PostContainer/PostsPage';
 import FuzzySearch from './FuzzySearch';
 import LocalData from './LocalData';
