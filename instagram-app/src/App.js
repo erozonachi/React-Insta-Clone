@@ -1,8 +1,7 @@
 import React from 'react';
-import SearchBar from './components/SearchBar/SearchBar';
 import getDummyData from './dummy-data';
 import './App.css';
-import PostContainer from './components/PostContainer/PostContainer';
+import PostsPage from './components/PostContainer/PostsPage';
 import FuzzySearch from './FuzzySearch';
 import LocalData from './LocalData';
 
@@ -82,14 +81,13 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <SearchBar changeHandler={this.handleSearch} />
-        {postList.map(post => <PostContainer 
-          key={post.id} 
+        <PostsPage 
+          searchChangeHandler={this.handleSearch}
+          postList={postList}
           changeHandler={this.handleChange} 
           submitHandler={this.handleSubmit}
           likeHandler={this.handleLikeClick}
-          post={post} 
-        />)}
+        />
       </div>
     );
   }
