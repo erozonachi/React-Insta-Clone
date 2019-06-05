@@ -23,7 +23,7 @@ export default class Login extends React.Component {
 
     if (this.state.username.trim() !== '' && this.state.password.trim() !== '') {
       /**  perform login */
-      LocalData.saveData('loginUser', this.state.username);
+      LocalData.saveData('loginUser', this.state.username.trim());
 
       this.setState({
         username: '',

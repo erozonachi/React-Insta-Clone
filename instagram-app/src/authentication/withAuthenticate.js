@@ -16,10 +16,15 @@ const withAuthenticate = PostsComponent => LoginComponent => {
         this.setState({loggedIn: true})
       }
     }
-    
+
     render() {
+      if (this.state.loggedIn) {
+        return (
+          <PostsComponent {...this.props} />
+        );
+      }
       return (
-        <PostsComponent {...this.props} />
+        <LoginComponent />
       );
     }
   };
