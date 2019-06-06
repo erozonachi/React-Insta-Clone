@@ -5,7 +5,7 @@ import FavoriteIcon from '@material-ui/icons/FavoriteBorder';
 import PersonIcon from '@material-ui/icons/PersonOutlineOutlined';
 import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import './SearchBar.css';
+import SearchContainer from './StyledComponents/SearchBar';
 
 const useStyles = makeStyles(theme => ({
   icon: {
@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function SearchBar(props) {
   return(
-    <div className='search-bar'>
+    <SearchContainer>
       <div className='logo-container'>
         <span>
           <PhotoCamera className={`${useStyles().icon} logo-item`} />
@@ -36,7 +36,7 @@ export default function SearchBar(props) {
         <FavoriteIcon className={`${useStyles().iconSpaced} control`} />
         <PersonIcon className={`${useStyles().iconSpaced} control`} />
       </div>
-    </div>
+    </SearchContainer>
   );
 }
 
