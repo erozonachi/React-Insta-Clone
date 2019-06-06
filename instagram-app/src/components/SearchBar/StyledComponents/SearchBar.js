@@ -16,21 +16,6 @@ const SearchBar = styled.div`
     align-items: center;
     width: 33.33%;
   }
-  .search-controls {
-    @media (max-width:500px) {
-      width: 100%;
-    }
-  }
-
-  .search-controls {
-    justify-content: flex-end;
-    @media (max-width: 500px) {
-      justify-content: center;
-    }
-   .control {
-      cursor: pointer;
-    }
-  }
 `;
 
 export default SearchBar;

@@ -8,6 +8,7 @@ import PropTypes from 'prop-types';
 import SearchContainer from './StyledComponents/SearchBar';
 import LogoContainer from './StyledComponents/LogoContainer';
 import SearchBox from './StyledComponents/SearchContainer';
+import SocialControls from './StyledComponents/SocialControls';
 
 const useStyles = makeStyles(theme => ({
   icon: {
@@ -33,11 +34,11 @@ export default function SearchBar(props) {
       <SearchBox>
         <input onChange={props.changeHandler} placeholder='Search' />
       </SearchBox>
-      <div className='search-controls'>
+      <SocialControls>
         <ExploreIcon className={`${useStyles().iconSpaced} control`} />
         <FavoriteIcon className={`${useStyles().iconSpaced} control`} />
         <PersonIcon className={`${useStyles().iconSpaced} control`} />
-      </div>
+      </SocialControls>
     </SearchContainer>
   );
 }
