@@ -4,7 +4,6 @@ import PostHeader from './PostHeader';
 import PostLike from './PostLike';
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
-import './Posts.css';
 import LocalData from '../../LocalData';
 
 export default class PostContainer extends React.Component {
