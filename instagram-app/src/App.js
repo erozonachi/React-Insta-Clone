@@ -83,7 +83,7 @@ class App extends React.Component {
     this.state.posts;
 
     return (
-      <div className="App">
+      <div>
         <ComponentFromWithAuthenticate 
           searchChangeHandler={this.handleSearch}
           postList={postList}

@@ -10,10 +10,7 @@ const AddCommentBox = styled.form`
   padding: 1em 0;
 
   > input {
-    outline: none;
-    border: none;
     width: 90%;
-    background-color: inherit;
   }
   > button {
     outline: none;

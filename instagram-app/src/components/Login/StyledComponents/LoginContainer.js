@@ -11,9 +11,7 @@ const box = `
 `;
 const spacing = `
   width: 80%;
-  padding: .5em 0;
   margin: .5em 0;
-  outline: 0;
 `;
 
 const LoginContainer = styled.div`
@@ -33,12 +31,11 @@ const LoginContainer = styled.div`
 
     > input {
       ${spacing}
-      border: 1px solid #aaa;
-      background-color: #eee;
-      text-align: center;
     }
     > button {
       ${spacing}
+      padding: .5em 0;
+      outline: 0;
       border: none;
       background-color: rgb(9, 124, 139, .7);
       color: white;

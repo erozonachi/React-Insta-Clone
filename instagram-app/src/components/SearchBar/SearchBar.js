@@ -8,6 +8,7 @@ import PropTypes from 'prop-types';
 import SearchContainer from './StyledComponents/SearchBar';
 import LogoContainer from './StyledComponents/LogoContainer';
 import SearchBox from './StyledComponents/SearchContainer';
+import InputBox from '../StyledComponents/InputBox';
 import SocialControls from './StyledComponents/SocialControls';
 
 const useStyles = makeStyles(theme => ({
@@ -32,7 +33,7 @@ export default function SearchBar(props) {
         </h1>
       </LogoContainer>
       <SearchBox>
-        <input onChange={props.changeHandler} placeholder='Search' />
+        <InputBox onChange={props.changeHandler} placeholder='Search' />
       </SearchBox>
       <SocialControls>
         <ExploreIcon className={`${useStyles().iconSpaced} control`} />

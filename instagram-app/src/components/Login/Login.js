@@ -1,6 +1,7 @@
 import React from 'react';
 import LocalData from '../../LocalData';
 import LoginContainer from './StyledComponents/LoginContainer';
+import InputBox from '../StyledComponents/InputBox';
 
 export default class Login extends React.Component {
   constructor(props) {
@@ -40,8 +41,8 @@ export default class Login extends React.Component {
       <LoginContainer>
         <h1>Instagram</h1>
         <form onSubmit={this.handleFormSubmit}>
-          <input onChange={this.handleInputChange} value={this.state.username} placeholder='Enter Username' />
-          <input onChange={this.handleInputChange} value={this.state.password} type='password' placeholder='Enter Password' />
+          <InputBox onChange={this.handleInputChange} value={this.state.username} placeholder='Enter Username' />
+          <InputBox onChange={this.handleInputChange} value={this.state.password} type='password' placeholder='Enter Password' />
           <button type='submit'>Login</button>
         </form>
       </LoginContainer>
