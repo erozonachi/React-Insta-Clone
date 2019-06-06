@@ -1,19 +1,9 @@
-.post-container {
-  display: flex;
-  flex-direction: column;
-  margin: 0 .5em;
-  background-color: #ffffff;
-}
 
-.post-container .post-header {
+.post-header {
   display: flex;
   align-items: center;
   width: 100%;
   padding: 1em 0;
-}
-
-.post-container > img {
-  width: 100%;
 }
 
 .post-header .display-pic {
