@@ -7,6 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import SearchContainer from './StyledComponents/SearchBar';
 import LogoContainer from './StyledComponents/LogoContainer';
+import SearchBox from './StyledComponents/SearchContainer';
 
 const useStyles = makeStyles(theme => ({
   icon: {
@@ -29,9 +30,9 @@ export default function SearchBar(props) {
           Instagram
         </h1>
       </LogoContainer>
-      <div className='search-box-container'>
-        <input onChange={props.changeHandler} className='search-box' placeholder='Search' />
-      </div>
+      <SearchBox>
+        <input onChange={props.changeHandler} placeholder='Search' />
+      </SearchBox>
       <div className='search-controls'>
         <ExploreIcon className={`${useStyles().iconSpaced} control`} />
         <FavoriteIcon className={`${useStyles().iconSpaced} control`} />
