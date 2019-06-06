@@ -17,7 +17,7 @@ const SearchBar = styled.div`
     width: 33.33%;
   }
 
-  .logo-container, .search-box-container {
+  .search-box-container {
     @media (max-width:500px) {
       width: 50%;
     }
@@ -25,22 +25,6 @@ const SearchBar = styled.div`
   .search-controls {
     @media (max-width:500px) {
       width: 100%;
-    }
-  }
-
-  .logo-container{ 
-    h1 {
-      border-left: 1px solid #aaa;
-      padding: 0 1em;
-      font-size: 2.8rem;
-    }
-    span {
-      padding: 0 1em;
-      font-size: 2.8rem;
-    }
-    .logo-item {
-      font-weight: bolder;
-      cursor: pointer;
     }
   }
 

@@ -6,6 +6,7 @@ import PersonIcon from '@material-ui/icons/PersonOutlineOutlined';
 import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import SearchContainer from './StyledComponents/SearchBar';
+import LogoContainer from './StyledComponents/LogoContainer';
 
 const useStyles = makeStyles(theme => ({
   icon: {
@@ -20,14 +21,14 @@ const useStyles = makeStyles(theme => ({
 export default function SearchBar(props) {
   return(
     <SearchContainer>
-      <div className='logo-container'>
+      <LogoContainer>
         <span>
           <PhotoCamera className={`${useStyles().icon} logo-item`} />
         </span>
-        <h1 className='logo-item'>
+        <h1>
           Instagram
         </h1>
-      </div>
+      </LogoContainer>
       <div className='search-box-container'>
         <input onChange={props.changeHandler} className='search-box' placeholder='Search' />
       </div>

@@ -31,7 +31,6 @@ export default class CommentSection extends Component {
   render() {
     const postedWhen = moment(
       moment(this.props.timestamp).format('YYYYMMDD'), 'YYYYMMDD').fromNow();
-    console.log(postedWhen);
 
     return (
       <div className='comment-container'>
