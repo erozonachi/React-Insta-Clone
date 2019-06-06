@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default function Comment(props) {
   return(
-    <li className='comment-item'>
+    <li>
       <span>{props.comment.username} </span>{props.comment.text}
     </li>
   );

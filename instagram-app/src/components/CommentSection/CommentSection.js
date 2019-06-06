@@ -4,7 +4,6 @@ import Comment from './Comment';
 import AddComment from './AddComment';
 import moment from 'moment';
 import PropTypes from 'prop-types';
-import './Comments.css';
 
 export default class CommentSection extends Component {
   constructor(props) {

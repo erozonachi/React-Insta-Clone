@@ -15,6 +15,7 @@ const CommentContainer = styled.div`
     align-items: flex-start;
     margin-left: .5em;
     > li {
+      text-align: left;
       margin-bottom: .5em;
       > span {
         font-weight: bold;
