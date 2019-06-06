@@ -1,10 +1,11 @@
 import React from 'react';
+import TopBar from './StyledComponents/PostHeader';
 
 export default function PostHeader(props) {
   return (
-    <div className='post-header'>
-      <img className='display-pic' src={props.displayPic} alt={`${props.username} profile`} />
+    <TopBar>
+      <img src={props.displayPic} alt={`${props.username} profile`} />
       <span>{props.username}</span>
-    </div>
+    </TopBar>
   );
 }

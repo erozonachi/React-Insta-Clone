@@ -1,21 +1,4 @@
 
-.post-header {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 1em 0;
-}
-
-.post-header .display-pic {
-  width: 50px;
-  border-radius: 50%;
-  margin: 0 .5em;
-}
-
-.post-header span {
-  font-weight: bold;
-}
-
 .like-container {
   display: flex;
   flex-direction: column;
