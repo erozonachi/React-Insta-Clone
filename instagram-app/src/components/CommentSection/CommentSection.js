@@ -1,4 +1,5 @@
 import React, {Component,} from 'react';
+import CommentContainer from './StyledComponents/CommentContainer';
 import Comment from './Comment';
 import AddComment from './AddComment';
 import moment from 'moment';
@@ -33,7 +34,7 @@ export default class CommentSection extends Component {
       moment(this.props.timestamp).format('YYYYMMDD'), 'YYYYMMDD').fromNow();
 
     return (
-      <div className='comment-container'>
+      <CommentContainer>
         <ul>
           {this.state.comments.map(comment => <Comment key={`${comment.id}`} comment={comment} />)}
         </ul>
@@ -43,7 +44,7 @@ export default class CommentSection extends Component {
           changeHandler={this.onChangeHandler}
           submitHandler={this.addNewComment}
         />
-      </div>
+      </CommentContainer>
     );
   }
 }
