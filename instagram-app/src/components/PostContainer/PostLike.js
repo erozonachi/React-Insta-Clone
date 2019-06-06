@@ -1,4 +1,5 @@
 import React from 'react';
+import LikeContainer from './StyledComponents/LikeContainer';
 import FavoriteIcon from '@material-ui/icons/FavoriteBorder';
 import CommentIcon from '@material-ui/icons/ModeCommentOutlined';
 import { makeStyles } from '@material-ui/core/styles';
@@ -21,8 +22,8 @@ export default function PostLike(props) {
   const styles = useStyles();
 
     return(
-      <div className='like-container'>
-        <div className='like-controls'>
+      <LikeContainer>
+        <div>
           <FavoriteIcon 
             onClick={props.likeHandler} 
             className={`${styles.iconSpaced} like-control ${props.liked? styles.bgRed : null}`} 
@@ -30,6 +31,6 @@ export default function PostLike(props) {
           <CommentIcon className={`${styles.iconSpaced} like-control`} />
         </div>
         <span>{`${props.likes} ${props.likes > 1? 'likes' : 'like'}`}</span>
-      </div>
+      </LikeContainer>
     );
 }
