@@ -2,8 +2,8 @@
 
 ### Focus (Day IV)
 
-- Be able to use styled-components to add functional styles to your React Components
-- Be able to explain why state driven views and components are useful patterns for scalability, composability, and reuse and how React enables those patterns
+- [x] Be able to use styled-components to add functional styles to your React Components
+- [x] Be able to explain why state driven views and components are useful patterns for scalability, composability, and reuse and how React enables those patterns
 
 ### Daily Setup (Day IV)
 
@@ -12,9 +12,9 @@
 
 #### Tasks (Day IV)
 
-- Try and replace all of the styles you have previously written. Change everything to be a Styled Component. (Except for where you need to reference your icon classNames.)
+- [x] Try and replace all of the styles you have previously written. Change everything to be a Styled Component. (Except for where you need to reference your icon classNames.)
 
-- Re-factor `SearchBar` to use `styled-components`.
+- [x] Re-factor `SearchBar` to use `styled-components`.
 - Create a `Header` styled-component.header that wraps your entire SearchBar.
 
   - We recommend working left to right so begin changing out your styles on the instagram logo.
