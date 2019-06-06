@@ -35,11 +35,7 @@ const LoginContainer = styled.div`
     > button {
       ${spacing}
       padding: .5em 0;
-      outline: 0;
-      border: none;
-      background-color: rgb(9, 124, 139, .7);
       color: white;
-      cursor: pointer;
     }
   }
 `;

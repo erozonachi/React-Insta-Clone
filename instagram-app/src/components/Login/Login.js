@@ -2,6 +2,7 @@ import React from 'react';
 import LocalData from '../../LocalData';
 import LoginContainer from './StyledComponents/LoginContainer';
 import InputBox from '../StyledComponents/InputBox';
+import Button from '../StyledComponents/Button';
 
 export default class Login extends React.Component {
   constructor(props) {
@@ -43,7 +44,7 @@ export default class Login extends React.Component {
         <form onSubmit={this.handleFormSubmit}>
           <InputBox onChange={this.handleInputChange} value={this.state.username} placeholder='Enter Username' />
           <InputBox onChange={this.handleInputChange} value={this.state.password} type='password' placeholder='Enter Password' />
-          <button type='submit'>Login</button>
+          <Button type='submit'>Login</Button>
         </form>
       </LoginContainer>
     );
