@@ -1,6 +1,6 @@
 import React from 'react';
 import LocalData from '../../LocalData';
-import './Login.css';
+import LoginContainer from './StyledComponents/LoginContainer';
 
 export default class Login extends React.Component {
   constructor(props) {
@@ -37,14 +37,14 @@ export default class Login extends React.Component {
 
   render() {
     return (
-      <div className='login-container'>
+      <LoginContainer>
         <h1>Instagram</h1>
         <form onSubmit={this.handleFormSubmit}>
           <input onChange={this.handleInputChange} value={this.state.username} placeholder='Enter Username' />
           <input onChange={this.handleInputChange} value={this.state.password} type='password' placeholder='Enter Password' />
           <button type='submit'>Login</button>
         </form>
-      </div>
+      </LoginContainer>
     );
   }
 }
